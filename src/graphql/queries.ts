@@ -50,6 +50,7 @@ export const GET_PLACE_BY_SLUG = gql`
   query getPlaceBySlug($slug: String!) {
     place(where: { slug: $slug }) {
       id
+      name
       slug
       location {
         latitude
@@ -57,6 +58,7 @@ export const GET_PLACE_BY_SLUG = gql`
       }
       description {
         html
+        text
       }
       gallery {
         url

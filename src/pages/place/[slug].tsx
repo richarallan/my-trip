@@ -37,6 +37,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!place) return { notFound: true }
 
   return {
+    //new Properties
     props: {
       place
     }
