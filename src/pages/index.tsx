@@ -11,6 +11,7 @@ export default function Home({ places }: MapProps) {
 export const getStaticProps = async () => {
   const { places } = await client.request<GetPlacesQuery>(GET_PLACES)
 
+  //adicionei uma tag
   return {
     //para ISR -> deixarei desabilitado pois não é necessário
     // revalidate: 604800,
