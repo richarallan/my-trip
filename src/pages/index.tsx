@@ -12,6 +12,8 @@ export const getStaticProps = async () => {
   const { places } = await client.request<GetPlacesQuery>(GET_PLACES)
 
   return {
+    //para ISR -> deixarei desabilitado pois não é necessário
+    // revalidate: 604800,
     props: {
       places
     }
